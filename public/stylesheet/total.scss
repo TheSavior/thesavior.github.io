@@ -20,20 +20,23 @@ body {
 
 section#header {
   height: 300px;
-  border-bottom: 1px solid #ccc;
+  // border-bottom: 1px solid #ccc;
 }
 
 
 .images {
-  // @include display-flex();
 
   position: absolute;
   z-index: -1;
   left: 0;
   right: 0;
+  height: 100%;
 
   > div {
     float: left;
+    padding: 5px;
+    height: 100%;
+    overflow: hidden;
   }
 
   &.s33 {
@@ -68,10 +71,12 @@ section.feature {
   position: relative;
 
   height: 200px;
-  border-bottom: 1px solid #ccc;
+  // border-bottom: 1px solid #ccc;
   @include vertical-center();
 
   overflow: hidden;
+
+  margin-bottom: 15px;
 
 
 
