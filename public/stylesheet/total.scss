@@ -8,7 +8,7 @@ body, html {
 body {
   font-family: Helvetica, 'Open Sans', Arial, sans-serif;
   color: #666;
-  font-size: 16px;
+  font-size: 20px;
   line-height:150%;
   font-weight: 100;
   text-align: center;
@@ -20,72 +20,70 @@ body {
 }
 
 section#header {
+  @include vertical-center();
+  @include flex-direction(column);
+
   height: 300px;
+
+  h1 {
+    font-size: 40px;
+    margin-bottom: 20px;
+  }
+
+  h2 {
+    font-size: 20px;
+    font-style: italic;
+  }
   // border-bottom: 1px solid #ccc;
 }
 
-
-.images {
-
-  // position: absolute;
-  // z-index: -1;
-  // left: 0;
-  // right: 0;
-  // height: 100%;
-  height: 100px;
-
-  > div {
-    float: left;
-    padding: 5px;
-    height: 100%;
-    overflow: hidden;
-  }
-
-  &.s33 {
-    > div {
-      width: 33.33333%;
-    }
-  }
-
-  &.s25 {
-    > div {
-      width: 25%;
-    }
-  }
-
-  &.s30-70 {
-    > div:first-child {
-      width: 30%;
-    }
-
-    > div:last-child {
-      width: 70%;
-    }
-  }
-
-  img {
-    width: 100%;
-  }
-}
-
-
 section.feature {
   position: relative;
-
-  // height: 200px;
   border-bottom: 1px solid #ccc;
-
   overflow: hidden;
-
   padding-bottom: 30px;
   margin-top: 20px;
 
+  .images {
+    height: 100px;
 
+    > div {
+      float: left;
+      padding: 0 5px;
+      height: 100%;
+      overflow: hidden;
+    }
 
+    &.s33 {
+      > div {
+        width: 33.33333%;
+      }
+    }
+
+    &.s25 {
+      > div {
+        width: 25%;
+      }
+    }
+
+    &.s30-70 {
+      > div:first-child {
+        width: 30%;
+      }
+
+      > div:last-child {
+        width: 70%;
+      }
+    }
+
+    img {
+      width: 100%;
+    }
+  }
 
   .text {
     padding: 10px 30px;
-    color: black;
+    // color: black;
     border-radius: 3px;
 
     span {
@@ -94,21 +92,19 @@ section.feature {
     }
 
     .title {
-      font-size: 30px;
+      font-size: 34px;
     }
 
     .subtext {
       // display: none;
-      font-size: 20px;
+      font-size: 24px;
       margin-bottom: 0;
     }
   }
 
   .content {
-    display: none;
+    text-align: left;
     padding: 20px 0;
-    max-width: 600px;
     margin: auto;
-    text-align: center;
   }
 }
