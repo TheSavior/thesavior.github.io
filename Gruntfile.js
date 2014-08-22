@@ -40,7 +40,7 @@ module.exports = function(grunt) {
       },
 
       html: {
-        files: 'public/index.html',
+        files: 'public/*.html',
         tasks: ['env:dev', 'preprocess:html'],
         options: {
           livereload: true,
@@ -116,8 +116,10 @@ module.exports = function(grunt) {
 
     preprocess: {
       html: {
-        src: 'public/index.html',
-        dest: 'build/index.html'
+        files: {
+          'build/index.html': 'public/index.html',
+          'build/blog.html': 'public/blog.html'
+        }
       },
     },
 
@@ -160,7 +162,8 @@ module.exports = function(grunt) {
           collapseWhitespace: true
         },
         files: { // Dictionary of files
-          'build/index.html': 'build/index.html'
+          'build/index.html': 'build/index.html',
+          'build/blog.html': 'build/blog.html'
         }
       }
     },

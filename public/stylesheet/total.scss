@@ -41,7 +41,7 @@ section.feature {
   position: relative;
   border-bottom: 1px solid #ccc;
   overflow: hidden;
-  padding-bottom: 30px;
+  padding-bottom: 25px;
   margin-top: 20px;
 
   .images {
@@ -104,7 +104,12 @@ section.feature {
 
   .content {
     text-align: left;
-    padding: 20px 0;
+    padding: 20px 0 20px 0;
     margin: auto;
+  }
+
+  .readmore {
+    font-size: 18px;
+    text-align: right;
   }
 }
