@@ -1,16 +1,19 @@
 @import "mixins.scss";
 @import "reset.scss";
+// @import url(http://fonts.googleapis.com/css?family=Roboto:400,300,700,500,400italic);
 
 body, html {
   cursor: default;
 }
 
 body {
-  font-family: Helvetica, 'Open Sans', Arial, sans-serif;
-  color: #666;
-  font-size: 20px;
-  line-height:150%;
-  font-weight: 100;
+  font-family: Roboto, Helvetica, 'Open Sans', Arial, sans-serif;
+  color: rgba(0,0,0, .54);
+
+  font-size: 24px;
+  line-height: 1.5;
+  font-weight: 400;
+
   text-align: center;
   height: 100%;
 }
@@ -23,11 +26,11 @@ body {
 
 section {
   min-height: 300px;
-  @include vertical-center();
   border-bottom: 1px solid #ccc;
 }
 
 section#header {
+  @include vertical-center();
   @include flex-direction(column);
 
   background: url('../images/background_1.jpg') no-repeat center center fixed;
@@ -36,21 +39,23 @@ section#header {
   height: 80%;
 
   .content {
-    max-width: 600px;
+    max-width: 960px;
     margin: auto;
-    color: white;
     font-weight: bold;
-    text-shadow: 0px 2px 1px black;
+    text-shadow: 0px 1px 1px black;
   }
 
   h1 {
-    font-size: 58px;
+    color: white;
+    font-size: 112px;
+    font-weight: 400;
     margin-bottom: 30px;
   }
 
   h2 {
+    color: white;
     font-weight: normal;
-    font-size: 24px;
+    font-size: 34px;
   }
 
   .boxes {
@@ -69,7 +74,10 @@ section#header {
       border: 1px solid #ccc;
       border-bottom-width: 2px;
       margin-left: 40px;
-      color: black;
+
+      &:first-child {
+        margin-left: 0;
+      }
 
       &:hover {
         border-width: 2px 2px 3px 2px;
@@ -80,21 +88,94 @@ section#header {
 }
 
 section#work {
+  @include vertical-center();
   margin-top: 140px;
 
   img {
+    &:first-child {
+      margin-left: 0;
+    }
+
     margin-left: 80px;
-    width: 300px;
+    min-width: 300px;
     height: 107px;
+  }
+}
+
+#projects {
+  padding-top: 80px;
+
+  > div {
+    width: 100%;
+    margin-bottom: 80px;
+  }
+  // @include display-flex();
+  // @include flex-wrap(wrap);
+  // @include flex-direction(column);
+
+  .item {
+    vertical-align: top;
+    width: 580px;
+    display: inline-block;
+    margin-left: 80px;
+
+    &:first-child {
+      margin-left: 0;
+    }
+
+    .image {
+      // width: 580px;
+      height: 200px;
+      background-size: cover;
+      margin: auto;
+
+      position: relative;
+
+      border: 1px solid #ccc;
+
+      /*&::after {
+        content: "";
+        position: absolute;
+        background-color: white;
+        border: 1px solid #ccc;
+        top: -5px;
+        bottom: -5px;
+        right: -5px;
+        left: -5px;
+        z-index: -1;
+      }*/
+    }
+
+    .text {
+      .title {
+        padding-top: 16px;
+        font-size: 34px;
+        display: block;
+
+        margin-bottom: 12px;
+        color: rgba(0,0,0,.87);
+        // font-weight: 500;
+      }
+
+      .info {
+        color: #888;
+        font-weight: 300;
+      }
+    }
   }
 }
 
 section#travel {
   @include display-flex();
+  @include vertical-center();
   @include flex-justify-content(center);
   // background-color: red;
 
   .item {
+    &:first-child {
+      margin-left: 0;
+    }
+
     @include display-flex();
     @include flex-direction(column);
     margin-left: 80px;
