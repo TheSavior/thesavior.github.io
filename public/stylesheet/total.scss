@@ -1,6 +1,7 @@
 @import "mixins.scss";
 // @import "reset.scss";
 @import "pure-min.scss";
+@import "pure-grids-responsive-min.scss";
 
 a, a:active, a:hover, a:visited {
   text-decoration: none;
@@ -11,7 +12,6 @@ a, a:active, a:hover, a:visited {
   @include box-sizing(border-box);
 }
 
-@import "pure-grids-responsive-min.scss";
 @import "icomoon.scss";
 @import "typography.scss";
 
@@ -34,8 +34,8 @@ body {
 }
 
 .feature {
-  min-height: 300px;
-  border-bottom: 1px solid #ccc;
+  min-height: 200px;
+  // border-bottom: 1px solid #ccc;
 }
 
 .txt-btn {
@@ -44,6 +44,11 @@ body {
   &:hover {
     color: $accentColor;
   }
+}
+
+.read-more {
+  margin-top: 0;
+  font-weight: 700;
 }
 
 #header {
@@ -56,12 +61,10 @@ body {
     margin: auto;
 
     h1 {
-      // @extend .gdisplay3;
-      // margin-bottom: 30px;
+      @extend .gdisplay1;
     }
 
     .subtext {
-      // @extend .gdisplay1;
       font-style: italic;
     }
   }
@@ -79,19 +82,20 @@ body {
 
 section#work {
   @include vertical-center();
-  // margin-top: 50px;
+  @include flex-direction(column);
 
-  .work-logo {
+  .logos {
+    @extend .pure-g;
+    margin-bottom: 0;
+  }
+
+  .logos-logo {
     padding: 20px;
+    @extend .pure-u-1;
+    @extend .pure-u-md-1-3;
   }
 
   img {
-    // &:first-child {
-    //   margin-left: 0;
-    // }
-
-    // margin-left: 80px;
-    // min-width: 200px;
     max-height: 80px;
     margin: auto;
   }
@@ -99,6 +103,7 @@ section#work {
 
 #projects {
   padding-top: 80px;
+  padding-bottom: 50px;
 
   &.is-expanded {
     #moreProjects {
@@ -112,7 +117,7 @@ section#work {
   }
 
   .projects-wrapper {
-    margin-bottom: 50px;
+    // margin-bottom: 50px;
     @include display-flex();
     @include flex-wrap(wrap);
     @include flex-justify-content(center);
@@ -127,7 +132,7 @@ section#work {
   }
 
   #readmore {
-    @extend .gtitle;
+    // @extend .gtitle;
     margin-bottom: 20px;
     transform: translate(0px, 0px);
   }
@@ -140,12 +145,15 @@ section#work {
   padding: 0 30px;
   margin-bottom: 40px;
 
+  @extend .pure-u-1;
+  @extend .pure-u-md-1-2;
+
   &:first-child {
     margin-left: 0 !important;
   }
 
   .image {
-    height: 250px;
+    height: 200px;
     background-size: cover;
     margin: auto;
 
@@ -163,11 +171,15 @@ section#work {
   }
 
   &.small-project {
-    padding: 0 30px;
-    margin-bottom: 60px;
+    padding: 0 20px;
+    margin-bottom: 40px;
+
+    @extend .pure-u-1;
+    @extend .pure-u-sm-1-2;
+    @extend .pure-u-md-1-3;
 
     .image {
-      height: 200px;
+      height: 150px;
     }
   }
 }
@@ -177,6 +189,7 @@ section#travel {
     min-height: 300px;
     position: relative;
     @include vertical-center();
+    margin-bottom: 70px;
 
     #map {
       background: url('../images/map.png');
@@ -201,17 +214,12 @@ section#travel {
     }
 
     .item {
-      // &:first-child {
-      //   margin-left: 0;
-      // }
-
       @include display-flex();
       @include flex-direction(column);
-      // margin-left: 80px;
       padding: 30px;
 
       .number {
-        @extend .gdisplay3;
+        @extend .gdisplay2;
       }
 
       .title {
@@ -220,30 +228,45 @@ section#travel {
     }
 
     .readmore {
-      @extend .gtitle;
+      // @extend .gtitle;
     }
   }
 
-  // .post {
-  //   position: relative;
-  //   height: 250px;
-  //   background-size: cover;
-  //   background-position: 50% 50%;
+  .post {
+    position: relative;
+    height: 200px;
+    background-size: cover;
+    background-position: 50% 50%;
 
-  //   .overlay {
-  //     height: 100%;
-  //   }
+    .overlay {
+      height: 100%;
+    }
 
-  //   .title, .subtext {
-  //     display: block;
-  //   }
+    .title, .subtext {
+      display: block;
+    }
 
-  //   .title {
-  //     @extend .gdisplay2;
-  //   }
+    .title {
+      @extend .gdisplay2;
+    }
 
-  //   .subtext {
-  //     @extend .gdisplay1;
-  //   }
-  // }
+    .subtext {
+      @extend .gdisplay1;
+    }
+  }
+}
+
+// sm
+@media screen and (min-width: 35.5em) {
+
+}
+
+// md
+@media screen and (min-width: 48em) {
+
+}
+
+// lg
+@media screen and (min-width: 64em) {
+
 }

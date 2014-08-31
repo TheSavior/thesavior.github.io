@@ -1,8 +1,8 @@
 "use strict";
 
 function init() {
-
   document.getElementById("readmore").addEventListener("click", function() {
+    console.log("clicked");
     document.getElementById("projects").classList.add("is-expanded");
   });
   /*document.addEventListener("scroll", (function(e) {
