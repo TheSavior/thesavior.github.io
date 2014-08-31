@@ -1,60 +1,63 @@
 <!DOCTYPE html>
 <html lang="en">
 
-<head>
-  <meta charset="utf-8">
-  <title>Eli White</title>
-  <meta name="viewport" content="initial-scale=1.0, user-scalable=no, minimal-ui">
-  <meta name="apple-mobile-web-app-capable" content="yes">
-  <link href='http://fonts.googleapis.com/css?family=Roboto:400,300,700,500,400italic' rel='stylesheet' type='text/css'>
-  <link rel="stylesheet" href="stylesheet/total.css">
-  <script src="javascript/main.min.js"></script>
-</head>
+  <head>
+    <meta charset="utf-8">
+    <title>Eli White</title>
+    <meta name="viewport" content="initial-scale=1.0, user-scalable=no, minimal-ui">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <link href='http://fonts.googleapis.com/css?family=Roboto:400,300,700,500,400italic' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="stylesheet/total.css">
+    <script src="javascript/main.min.js"></script>
+  </head>
 
-<body>
-  <div id="container">
-    <section id="header">
-      <div class="content">
+  <body>
+    <section id="header" class="feature">
+      <div class="content fixed-width">
         <h1>Eli White</h1>
-        <h2>Success is being an integral part of something my future kids couldn't imagine living without.</h2>
-      </div>
-
-      <div class="boxes">
-        <div class="box">Jack of All Trades Developer</div>
-        <div class="box">Avid Traveler</div>
-        <div class="box">Seeker of Delicious Desserts</div>
+        <span class="subtext">Success is being an integral part of something my future kids couldn't imagine living without.</span>
+        <div class="icons">
+          <a href="#" class="txt-btn"><i class="icon-facebook"></i></a>
+          <a href="#" class="txt-btn"><i class="icon-twitter"></i></a>
+          <a href="#" class="txt-btn"><i class="icon-uniE600"></i></a>
+          <a href="#" class="txt-btn"><i class="icon-uniE603"></i></a>
+        </div>
       </div>
     </section>
 
-    <section id="work">
-      <img src="images/airbnb_fixed.png" />
-      <img src="images/google_fixed.png" />
-      <img src="images/microsoft_fixed.png" />
+    <section id="work" class="feature">
+      <div class="fixed-width pure-g">
+        <div class="work-logo pure-u-1 pure-u-md-1-3">
+          <img class="pure-img" src="images/airbnb_fixed.png" />
+        </div>
+        <div class="work-logo pure-u-1 pure-u-md-1-3">
+          <img class="pure-img" src="images/google_fixed.png" />
+        </div>
+        <div class="work-logo pure-u-1 pure-u-md-1-3">
+          <img class="pure-img" src="images/microsoft_fixed.png" />
+        </div>
+      </div>
     </section>
 
-    <section id="projects">
-      <div class="featuredProjects content">
-        <div class="item">
+    <section id="projects" class="feature is-expanded">
+      <div class="projects-wrapper fixed-width pure-g">
+        <div class="project pure-u-1 pure-u-md-1-2">
           <div class="image" style="background-image: url('images/wheretheyatwide.png')"></div>
           <div class="text">
             <span class="title">WhereTheyAt</span>
-            <div class="info">
-              <p>
-                Using shared Facebook Data, see where your friends are in the world.
-              </p>
-            </div>
+            <div class="info">Using shared Facebook Data, see where your friends are in the world.</div>
           </div>
         </div>
 
-        <div class="item">
+        <div class="project pure-u-1 pure-u-md-1-2">
           <div class="image" style="background-image: url('images/drawwide.png')"></div>
           <div class="text">
             <span class="title">Draw</span>
             <div class="info">HTML5 Realtime collaborative drawing app focused on mobile web performance and offline support.</div>
           </div>
         </div>
-        <div class="item">
-          <div class="image" style="background-image: url('images/letters.jpg'); background-position-y: 50%;"></div>
+        <div class="project pure-u-1 pure-u-md-1-2">
+          <div class="image" style="background-image: url('images/letters.jpg');"></div>
           <div class="text">
             <span class="title">Laser Cut Letters</span>
             <div class="info">
@@ -62,7 +65,7 @@
           </div>
         </div>
 
-        <div class="item">
+        <div class="project pure-u-1 pure-u-md-1-2">
           <div class="image" style="background-image: url('images/lighttubes2.png');"></div>
           <div class="text">
             <span class="title">Music Visualizer</span>
@@ -71,59 +74,58 @@
         </div>
       </div>
 
-      <a href="#"><p class="readmore">See More</p></a>
+      <p id="readmore" class="txt-btn">See More</p>
 
-      <div class="moreProjects content">
-        <div class="item">
-          <div class="image" style="background-image: url('images/4sq-embed.png'); background-position: 00% 50%;">
+      <div id="moreProjects" class="projects-wrapper fixed-width">
+        <div class="project small-project pure-u-1 pure-u-sm-1-2 pure-u-md-1-3">
+          <div class="image" style="background-image: url('images/4sq-embed.png'); background-position-x: 0%">
           </div>
           <span class="title">Embedded 4Sq Venues</span>
         </div>
-        <div class="item">
-          <div class="image" style="background-image: url('images/fbsummarizer.png'); background-position: 50% 50%;">
+        <div class="project small-project pure-u-1 pure-u-sm-1-2 pure-u-md-1-3">
+          <div class="image" style="background-image: url('images/fbsummarizer.png');">
           </div>
           <span class="title">Newsfeed Summarizer</span>
         </div>
-        <div class="item">
-          <div class="image" style="background-image: url('images/fitbitphp.png'); background-position: 50% 50%;">
+        <div class="project small-project pure-u-1 pure-u-sm-1-2 pure-u-md-1-3">
+          <div class="image" style="background-image: url('images/fitbitphp.png');">
           </div>
           <span class="title">Fitbit PHP Library</span>
         </div>
 
-
-        <div class="item">
-          <div class="image" style="background-image: url('images/sleepcharts.png'); background-position: 50% 50%;">
+        <div class="project small-project pure-u-1 pure-u-sm-1-2 pure-u-md-1-3">
+          <div class="image" style="background-image: url('images/sleepcharts.png');">
           </div>
           <span class="title">Fitbit Sleep Charts</span>
         </div>
 
-        <div class="item">
-          <div class="image" style="background-image: url('images/perfectguy.png'); background-position: 50% 50%;">
+        <div class="project small-project pure-u-1 pure-u-sm-1-2 pure-u-md-1-3">
+          <div class="image" style="background-image: url('images/perfectguy.png');">
           </div>
           <span class="title">PerfectGuyBut (Very NSFW)</span>
         </div>
 
-        <div class="item">
-          <div class="image" style="background-image: url('images/javascript-ml.png'); background-position: 50% 50%;">
+        <div class="project small-project pure-u-1 pure-u-sm-1-2 pure-u-md-1-3">
+          <div class="image" style="background-image: url('images/javascript-ml.png');">
           </div>
           <span class="title">JS Machine Learning</span>
         </div>
 
-        <div class="item">
-          <div class="image" style="background-image: url('images/fifteenpuzzle.png'); background-position: 50% 50%;">
+        <div class="project small-project pure-u-1 pure-u-sm-1-2 pure-u-md-1-3">
+          <div class="image" style="background-image: url('images/fifteenpuzzle.png');">
           </div>
           <span class="title">Win8 Fifteen Puzzle</span>
         </div>
 
-        <div class="item">
-          <div class="image" style="background-image: url('images/towerdefense.png'); background-position: 50% 50%;">
+        <div class="project small-project pure-u-1 pure-u-sm-1-2 pure-u-md-1-3">
+          <div class="image" style="background-image: url('images/towerdefense.png');">
           </div>
           <span class="title">JS DOM Tower Defense</span>
         </div>
 
 
-        <div class="item">
-          <div class="image" style="background-image: url('images/whiteboard.png'); background-position: 50% 50%;">
+        <div class="project small-project pure-u-1 pure-u-sm-1-2 pure-u-md-1-3">
+          <div class="image" style="background-image: url('images/whiteboard.png');">
           </div>
           <span class="title">PHP Discussion Board</span>
         </div>
@@ -134,28 +136,28 @@
 
     </section>
 
-    <section id="travel">
+    <section id="travel"  class="feature">
       <div id="mapWrapper">
         <div id="map"></div>
 
         <div id="mapOverlay">
-          <div class="info">
-            <div class="item">
+          <div class="info pure-g">
+            <div class="item pure-u-1 pure-u-md-1-4">
               <span class="number" id="dayNum">137</span>
               <span class="title">Days</span>
             </div>
 
-            <div class="item">
+            <div class="item pure-u-1 pure-u-md-1-4">
               <span class="number">12</span>
               <span class="title">Countries</span>
             </div>
 
-            <div class="item">
+            <div class="item pure-u-1 pure-u-md-1-4">
               <span class="number">87</span>
               <span class="title">Dessert Shops</span>
             </div>
 
-            <div class="item">
+            <div class="item pure-u-1 pure-u-md-1-4">
               <span class="number">1</span>
               <span class="title">Summer</span>
             </div>
@@ -204,7 +206,6 @@
 
 
 
-  </div>
   <!-- <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyC57Bz0ZnVb6Qq6FIY0SP4XiiqUKKSq84M&amp;callback=startMap"></script> -->
 </body>
 

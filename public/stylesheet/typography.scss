@@ -1,0 +1,39 @@
+@import url(http://fonts.googleapis.com/css?family=Roboto:400,300,700,500,400italic);
+
+.gdisplay3 {
+  // color: rgba(0,0,0,.54);
+  font-size: 56px;
+  line-height: 70px;
+}
+
+.gdisplay2 {
+  // color: rgba(0,0,0,.54);
+  font-size: 45px;
+  line-height: 48px;
+}
+
+.gdisplay1 {
+  // color: rgba(0,0,0,.54);
+  font-size: 34px;
+  line-height: 40px;
+}
+
+.gtitle {
+  font-size: 20px;
+  // color: rgba(0,0,0,.87);
+  font-weight: 500;
+}
+
+.gbody {
+  font-size: 16px;
+  color: rgba(0,0,0,.87);
+  line-height: 20px;
+}
+
+body {
+  @extend .gbody;
+
+  font-weight: 400;
+  font-family: Roboto, Helvetica, Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+}

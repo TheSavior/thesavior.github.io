@@ -5,7 +5,7 @@ module.exports = function(grunt) {
     pkg: grunt.file.readJSON('package.json'),
 
     sass: {
-      build: {
+      dev: {
         options: {
           style: "expanded"
         },
@@ -26,7 +26,7 @@ module.exports = function(grunt) {
     watch: {
       scss: {
         files: ['public/stylesheet/*.scss'],
-        tasks: ['sass:build'],
+        tasks: ['sass:dev'],
         options: {
           livereload: true,
         }
@@ -176,5 +176,6 @@ module.exports = function(grunt) {
 
   // Default task(s).
   grunt.registerTask('default', ['env:prod', 'requirejs', 'uglify', 'clean', 'preprocess', 'htmlmin', 'sass:dist', 'copy' ]);
+  grunt.registerTask('dev', ['env:dev', 'clean', 'copy', 'preprocess', 'requirejs', 'sass:dev', 'watch']);
 
 };
