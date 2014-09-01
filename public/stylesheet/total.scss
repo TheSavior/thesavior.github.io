@@ -39,6 +39,7 @@ body {
 
 .txt-btn {
   cursor: pointer;
+  padding: 10px;
 
   &:hover {
     color: $accentColor;
@@ -46,10 +47,15 @@ body {
 }
 
 .read-more {
-  margin-top: 0;
+  // margin-top: 0;
   font-weight: 700;
-  margin-top: 10px;
-  margin-bottom: 10px;
+  // padding-top: 10px;
+  // padding-bottom: 10px;
+  width: 100%;
+}
+
+.invisible {
+  opacity: 0;
 }
 
 #header {
@@ -57,7 +63,7 @@ body {
   @include flex-direction(column);
   // border-bottom: 1px solid #ccc;
 
-  padding: 100px 0;
+  padding-top: 100px;
 
   .content {
     margin: auto;
@@ -68,7 +74,6 @@ body {
     }
 
     .subtext {
-      @extend .gtitle;
       font-style: italic;
     }
   }
@@ -82,6 +87,39 @@ body {
       padding: 10px;
     }
   }
+}
+
+section#about {
+  p {
+
+    margin: auto;
+    // margin-bottom: 10px;
+    padding: 10px;
+
+    a {
+      color: $accentColor;
+
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+  }
+
+  // sm
+  @media screen and (min-width: 35.5em) {
+    p {
+      width: 100%;
+    }
+  }
+
+  // md
+  @media screen and (min-width: 48em) {
+    p {
+      width: 600px;
+    }
+  }
+
+
 }
 
 section#work {
@@ -156,6 +194,15 @@ section#work {
     margin-left: 0 !important;
   }
 
+  &:hover {
+    .image {
+      // -webkit-filter: brightness(1.3);
+      -webkit-filter: sharpness(1.3);
+      // opacity: 0.8;
+      // -webkit-filter: blur(2px);
+    }
+  }
+
   .image {
     height: 150px;
     background-size: cover;
@@ -165,6 +212,8 @@ section#work {
 
     border: 1px solid #ccc;
     background-position: 50% 50%;
+
+    transition: .1s all;
   }
 
   .title {
