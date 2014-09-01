@@ -24,7 +24,6 @@ body, html {
 
 body {
   text-align: center;
-  padding-bottom: 30px;
 }
 
 .fixed-width {
@@ -33,8 +32,9 @@ body {
 }
 
 .feature {
-  min-height: 200px;
+  min-height: 150px;
   // border-bottom: 1px solid #ccc;
+  padding: 50px 0;
 }
 
 .txt-btn {
@@ -48,22 +48,27 @@ body {
 .read-more {
   margin-top: 0;
   font-weight: 700;
+  margin-top: 10px;
+  margin-bottom: 10px;
 }
 
 #header {
   @include vertical-center();
   @include flex-direction(column);
+  // border-bottom: 1px solid #ccc;
 
   padding: 100px 0;
 
   .content {
     margin: auto;
+    padding: 0 20px;
 
     h1 {
       @extend .gdisplay1;
     }
 
     .subtext {
+      @extend .gtitle;
       font-style: italic;
     }
   }
@@ -101,8 +106,8 @@ section#work {
 }
 
 #projects {
-  padding-top: 80px;
-  padding-bottom: 50px;
+  // padding-top: 80px;
+  // padding-bottom: 50px;
 
   &.is-expanded {
     #moreProjects {
@@ -132,7 +137,7 @@ section#work {
 
   #readmore {
     // @extend .gtitle;
-    margin-bottom: 20px;
+    // margin-bottom: 20px;
     transform: translate(0px, 0px);
   }
 }
@@ -142,7 +147,7 @@ section#work {
   display: inline-block;
   text-align: center;
   padding: 0 30px;
-  margin-bottom: 40px;
+  margin-bottom: 30px;
 
   @extend .pure-u-1;
   @extend .pure-u-md-1-2;
@@ -152,7 +157,7 @@ section#work {
   }
 
   .image {
-    height: 200px;
+    height: 150px;
     background-size: cover;
     margin: auto;
 
@@ -171,25 +176,25 @@ section#work {
 
   &.small-project {
     padding: 0 20px;
-    margin-bottom: 40px;
+    margin-bottom: 30px;
 
     @extend .pure-u-1;
     @extend .pure-u-sm-1-2;
     @extend .pure-u-md-1-3;
 
     .image {
-      height: 150px;
+      height: 100px;
     }
   }
 }
 
 section#travel {
+  padding: 0;
+
   #mapWrapper {
-    min-height: 300px;
+    min-height: 200px;
     position: relative;
     @include vertical-center();
-    margin-bottom: 70px;
-    padding-bottom: 30px;
 
     #map {
       background: url('../images/map.png');
@@ -208,13 +213,16 @@ section#travel {
 
     #mapOverlay {
       z-index: 1;
+      // font-weight: 700;
+      color: white;
+      text-shadow: 1px 1px 4px rgba(0,0,0,0.54);
     }
 
     .info {
       // @include display-flex();
       // @include flex-justify-content(center);
 
-      margin-bottom: 30px;
+      // margin-bottom: 30px;
     }
 
     .item {
@@ -224,10 +232,12 @@ section#travel {
 
       .number {
         @extend .gdisplay2;
+        font-weight: 700;
       }
 
       .title {
         @extend .gtitle;
+        font-weight: 700;
       }
     }
 
