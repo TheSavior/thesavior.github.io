@@ -82,7 +82,7 @@ module.exports = function(grunt) {
           out: "build/javascript/main.min.js",
 
           optimize: 'none',
-          generateSourceMaps: true,
+          generateSourceMaps: false,
 
           preserveLicenseComments: false,
           wrap: true
@@ -168,6 +168,18 @@ module.exports = function(grunt) {
       }
     },
 
+    inline: {
+      dist: {
+        options: {
+          tag: '',
+          cssmin: true,
+          uglify: true
+        },
+        src: ['build/index.html'],
+        dest: ['build/']
+      }
+    },
+
 
 
   });
@@ -175,7 +187,7 @@ module.exports = function(grunt) {
   require('load-grunt-tasks')(grunt);
 
   // Default task(s).
-  grunt.registerTask('default', ['env:prod', 'requirejs', 'uglify', 'clean', 'preprocess', 'htmlmin', 'sass:dist', 'copy' ]);
+  grunt.registerTask('default', ['env:prod', 'requirejs', /*'uglify', */ 'clean', 'preprocess', 'htmlmin', 'sass:dist', 'inline', 'copy' ]);
   grunt.registerTask('dev', ['env:dev', 'clean', 'copy', 'preprocess', 'requirejs', 'sass:dev', 'watch']);
 
 };
