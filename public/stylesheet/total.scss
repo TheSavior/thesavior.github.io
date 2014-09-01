@@ -243,7 +243,7 @@ section#travel {
   #mapWrapper {
     min-height: 200px;
     position: relative;
-    @include vertical-center();
+
 
     #map {
       background: url('../images/map.png');
@@ -261,10 +261,15 @@ section#travel {
     }
 
     #mapOverlay {
+      @include vertical-center();
+      position: absolute;
+      width: 100%;
+      height: 100%;
       z-index: 1;
       // font-weight: 700;
       color: white;
       text-shadow: 1px 1px 4px rgba(0,0,0,0.54);
+      background-color: rgba(0,0,0,.15);
     }
 
     .info {
