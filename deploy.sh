@@ -17,4 +17,4 @@ read message
 
 git --work-tree build commit -m "$message"
 git push origin master
-git symbolic-ref HEAD refs/heads/master && git reset --hard
+git symbolic-ref HEAD refs/heads/development && git reset --hard
