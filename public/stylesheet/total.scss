@@ -20,12 +20,11 @@ $accentColor: #ad24ab;
 
 body, html {
   cursor: default;
-  height: 100%;
 }
 
 body {
   text-align: center;
-  height: 100%;
+  padding-bottom: 30px;
 }
 
 .fixed-width {
@@ -190,6 +189,7 @@ section#travel {
     position: relative;
     @include vertical-center();
     margin-bottom: 70px;
+    padding-bottom: 30px;
 
     #map {
       background: url('../images/map.png');
@@ -201,9 +201,13 @@ section#travel {
       right: 0;
       bottom: 0;
       left: 0;
-      z-index: -1;
+      z-index: 0;
 
-      @include blur(3px);
+      // @include blur(3px);
+    }
+
+    #mapOverlay {
+      z-index: 1;
     }
 
     .info {
