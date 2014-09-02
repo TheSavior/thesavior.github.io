@@ -1,0 +1,20 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><title>404</title><meta name="viewport" content="initial-scale=1.0, user-scalable=no, minimal-ui"><meta name="apple-mobile-web-app-capable" content="yes"><style>body {
+      width: 600px;
+      margin: auto;
+    }
+    span {
+      font-family: monospace;
+    }</style><script>window.onload = function() {
+    var loc = window.location;
+    document.getElementById("original").textContent = loc.href;
+
+    var ele = document.createElement("a");
+    ele.href = location.href;
+    ele.host = "blog."+ele.host;
+
+    document.getElementById("new").textContent = ele.href;
+
+    setTimeout(function() {
+      window.location = ele.href;
+    }, 5000);
+  }</script></head><body><p>Could not find a page at <span id="original"></span>. URLs have recently changed, you might have been looking for <span id="new"></span>. Redirecting in 5 seconds.</p></body></html>
