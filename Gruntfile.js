@@ -118,7 +118,7 @@ module.exports = function(grunt) {
       html: {
         files: {
           'build/index.html': 'public/index.html',
-          'build/blog.html': 'public/blog.html'
+          'build/404.html': 'public/404.html'
         }
       },
     },
@@ -163,7 +163,7 @@ module.exports = function(grunt) {
         },
         files: { // Dictionary of files
           'build/index.html': 'build/index.html',
-          'build/blog.html': 'build/blog.html'
+          'build/404.html': 'build/404.html'
         }
       }
     },
@@ -175,7 +175,7 @@ module.exports = function(grunt) {
           cssmin: true,
           uglify: true
         },
-        src: ['build/index.html'],
+        src: ['build/index.html', 'build/404.html'],
         dest: ['build/']
       }
     },
