@@ -10,7 +10,14 @@
 
     var ele = document.createElement("a");
     ele.href = location.href;
-    ele.host = "blog."+ele.host;
+
+    if (ele.host.indexOf("www") === 0) {
+      ele.host = ele.host.replace("www", "blog");
+    }
+    else
+    {
+      ele.host = "blog."+ele.host;
+    }
 
     document.getElementById("new").textContent = ele.href;
 
