@@ -24,50 +24,43 @@ module.exports = function(grunt) {
     },
 
     watch: {
+      options: {
+        livereload: false
+      },
+
       scss: {
         files: ['public/stylesheet/*.scss'],
         tasks: ['sass:dev'],
-        options: {
-          livereload: true,
-        }
       },
       javascript: {
         files: 'public/javascript/**/*.js',
         tasks: ['requirejs'],
-        options: {
-          livereload: true,
-        }
       },
 
       html: {
         files: 'public/*.html',
         tasks: ['env:dev', 'preprocess:html'],
-        options: {
-          livereload: true,
-        }
       },
 
       images: {
         files: 'public/images/**/*',
         tasks: ['clean:images', 'copy:images'],
-        options: {
-          livereload: true,
-        }
       },
 
       fonts: {
         files: 'public/fonts/**/*',
         tasks: ['clean:fonts', 'copy:fonts'],
-        options: {
-          livereload: true,
-        }
       },
 
       favicon: {
         files: ['public/favicon.ico'],
         tasks: ['copy:favicon'],
+      },
+
+      build: {
+        files: ['build/**/*'],
         options: {
-          livereload: true,
+          livereload: true
         }
       },
     },
@@ -180,6 +173,16 @@ module.exports = function(grunt) {
       }
     },
 
+    'http-server': {
+        tests: {
+            root: 'build',
+            port: 6600,
+            host: 'localhost',
+            ext: 'html',
+
+            runInBackground: true
+        }
+    }
 
 
   });
@@ -188,6 +191,6 @@ module.exports = function(grunt) {
 
   // Default task(s).
   grunt.registerTask('default', ['env:prod', 'requirejs', /*'uglify', */ 'clean', 'preprocess', 'htmlmin', 'sass:dist', 'inline', 'copy' ]);
-  grunt.registerTask('dev', ['env:dev', 'clean', 'copy', 'preprocess', 'requirejs', 'sass:dev', 'watch']);
+  grunt.registerTask('dev', ['env:dev', 'clean', 'copy', 'preprocess', 'requirejs', 'sass:dev', 'http-server', 'watch']);
 
 };
