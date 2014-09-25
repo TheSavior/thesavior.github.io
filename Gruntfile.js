@@ -57,6 +57,11 @@ module.exports = function(grunt) {
         tasks: ['copy:favicon'],
       },
 
+      files: {
+        files: 'public/files/**/*',
+        tasks: ['clean:files', 'copy:files'],
+      },
+
       build: {
         files: ['build/**/*'],
         options: {
@@ -95,6 +100,7 @@ module.exports = function(grunt) {
       map: ["build/javascript/main.min.js.map"],
       images:["build/images/"],
       fonts:["build/fonts/"],
+      files:["build/files/"]
     },
 
     env: {
@@ -145,6 +151,15 @@ module.exports = function(grunt) {
 
         src: 'public/CNAME',
         dest: 'build/CNAME',
+      },
+
+      files: {
+        expand: true,
+        flatten: true,
+        filter: 'isFile',
+
+        src: 'public/files/**/*',
+        dest: 'build/files/',
       }
     },
 
