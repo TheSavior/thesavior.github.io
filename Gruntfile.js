@@ -150,7 +150,7 @@ module.exports = function(grunt) {
         filter: 'isFile',
 
         src: 'public/CNAME',
-        dest: 'build/CNAME',
+        dest: 'build/CNAME'
       },
 
       files: {
@@ -159,7 +159,7 @@ module.exports = function(grunt) {
         filter: 'isFile',
 
         src: 'public/files/**/*',
-        dest: 'build/files/',
+        dest: 'build/files/'
       }
     },
 
@@ -205,7 +205,7 @@ module.exports = function(grunt) {
   require('load-grunt-tasks')(grunt);
 
   // Default task(s).
-  grunt.registerTask('default', ['env:prod', 'requirejs', /*'uglify', */ 'clean', 'preprocess', 'htmlmin', 'sass:dist', 'inline', 'copy' ]);
+  grunt.registerTask('default', ['env:prod', 'requirejs', /*'uglify', */ 'clean', 'preprocess', 'copy', 'htmlmin', 'sass:dist', 'inline']);
   grunt.registerTask('dev', ['env:dev', 'clean', 'copy', 'preprocess', 'requirejs', 'sass:dev', 'http-server', 'watch']);
 
 };
