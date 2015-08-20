@@ -32,8 +32,9 @@ function init() {
   json = JSON.parse(json);
 
 
-  var startDate = new Date(2013, 13, 12);
-  var daysSinceStart = Math.round((Date.now() - startDate) / 1000 / 60 / 60 / 24);
+  var startDate = new Date(2013, 12, 13);
+  var endDate = new Date(2015, 1, 1);
+  var daysSinceStart = Math.round((endDate - startDate) / 1000 / 60 / 60 / 24);
   document.getElementById("day-num").textContent = daysSinceStart;
   document.getElementById("country-num").textContent = json.countries;
   document.getElementById("dessert-num").textContent = json.totalDessert * 2;
