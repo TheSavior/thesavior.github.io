@@ -7,19 +7,19 @@ module.exports = function(grunt) {
     sass: {
       dev: {
         options: {
-          style: "expanded"
+          outputStyle: "expanded"
         },
-        files: [{
+        files: {
           'build/stylesheet/total.css': 'public/stylesheet/total.scss',
-        }]
+        }
       },
       dist: {
         options: {
-          style: "compressed",
+          outputStyle: "compressed",
         },
-        files: [{
+        files: {
           'build/stylesheet/total.css': 'public/stylesheet/total.scss',
-        }]
+        }
       }
     },
 
