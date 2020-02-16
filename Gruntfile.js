@@ -117,7 +117,9 @@ module.exports = function(grunt) {
       html: {
         files: {
           'build/index.html': 'public/index.html',
-          'build/404.html': 'public/404.html'
+          'build/404.html': 'public/404.html',
+          'build/tritowers-privacy.html': 'public/tritowers-privacy.html',
+          'build/nextshow-privacy.html': 'public/nextshow-privacy.html'
         }
       },
     },
@@ -171,7 +173,9 @@ module.exports = function(grunt) {
         },
         files: { // Dictionary of files
           'build/index.html': 'build/index.html',
-          'build/404.html': 'build/404.html'
+          'build/404.html': 'build/404.html',
+          'build/tritowers-privacy.html': 'build/tritowers-privacy.html',
+          'build/nextshow-privacy.html': 'build/nextshow-privacy.html'
         }
       }
     },
